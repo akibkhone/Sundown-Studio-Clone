@@ -701,6 +701,89 @@ form button {
 	}
 }
 
+#loader {
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	transition: all ease 0.7s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#loader h1 {
+	font-size: 4vw;
+	color: transparent;
+	background: linear-gradient(to right, orange, orangered);
+	-webkit-background-clip: text;
+	position: absolute;
+	opacity: 0;
+	animation-name: load;
+	animation-duration: 1s;
+	animation-delay: 1s;
+	animation-timing-function: linear;
+}
+#loader h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#loader h1:nth-child(3) {
+	animation-delay: 3s;
+}
+
+@keyframes load {
+	0% {
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+#fullScreen {
+	height: 100vh;
+	width: 100%;
+	background-color: #00000070;
+	position: fixed;
+	z-index: 99;
+	top: -100%;
+	transition: all ease 0.5s;
+}
+
+#fullScreen > div {
+	height: 50%;
+	width: 100%;
+	background-color: #efeae3;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+}
+
+#fullScreen > div h1 {
+	font-size: 3rem;
+	font-family: NeueHaasDisplayBold;
+	margin-right: 30px;
+}
+
+#fullScreen h6 {
+	font-size: 1.2em;
+	border: 1px solid gray;
+	padding: 10px 20px;
+	border-radius: 20px;
+	margin-right: 30px;
+}
+
 @media only screen and (max-width: 480px) {
 	#hero {
 		padding: 15px;
@@ -1003,9 +1086,16 @@ form button {
 		left: -50%;
 		filter: blur(3rem);
 	}
+
+	#loader h1 {
+		font-size: 10vw;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+	#loader h1 {
+		font-size: 4rem;
+	}
 	#hero {
 		width: 100vw;
 		padding: 20px;

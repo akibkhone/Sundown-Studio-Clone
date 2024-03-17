@@ -1,3 +1,8 @@
+const scroll = new LocomotiveScroll({
+	el: document.querySelector('main'),
+	smooth: true,
+});
+
 function handleProjects() {
 	const projectContainer = document.querySelector('#project-container');
 	const projects = projectContainer.querySelectorAll('.project');
@@ -93,7 +98,49 @@ function handleSwiper() {
 	});
 }
 
+function handleMenu() {
+	// Selecting the elements needed for menu functionality
+	var menuOpen = document.querySelector('nav h6'); // Element to open the menu
+	var menuClose = document.querySelector('.close-menu h6'); // Element to close the menu
+	var full = document.querySelector('#fullScreen'); // Full-screen menu container
+	var logo = document.querySelector('nav img'); // Logo element
+	var flag = 0; // Flag to track menu state (0: closed, 1: open)
+
+	// Adding click event listener to open the menu
+	menuOpen.addEventListener('click', function () {
+		if (flag == 0) {
+			// If menu is closed
+			full.style.top = 0; // Show the full-screen menu by setting its top position to 0
+			logo.style.opacity = 0; // Hide the logo by setting its opacity to 0
+			flag = 1; // Update flag to indicate menu is open
+		} else {
+			// If menu is open
+			full.style.top = '-100%'; // Hide the full-screen menu by setting its top position to -100%
+			logo.style.opacity = 1; // Show the logo by setting its opacity to 1
+			flag = 0; // Update flag to indicate menu is closed
+		}
+	});
+
+	menuClose.addEventListener('click', function () {
+		if (flag == 1) {
+			// If the menu is open
+			full.style.top = '-100%'; // Hide the full-screen menu by setting its top position to -100%
+			logo.style.opacity = 1; // Show the logo by setting its opacity to 1
+			flag = 0; // Update flag to indicate menu is closed
+		}
+	});
+}
+
+function handleLoader() {
+	var loader = document.querySelector('#loader');
+	setTimeout(function () {
+		loader.style.top = '-100%';
+	}, 4200);
+}
+
 // Call the functions
 handleProjects();
 handleServices();
 handleSwiper();
+handleMenu();
+handleLoader();
