@@ -70,23 +70,27 @@ function handleServices() {
 }
 
 function handleSwiper() {
-	var swiperOptions = {
+	var slidesPerView;
+
+	// Adjust slides per view based on screen width
+	if (window.innerWidth < 480) {
+		slidesPerView = 2;
+	} else if (window.innerWidth <= 768) {
+		slidesPerView = 3;
+	} else {
+		slidesPerView = 4;
+	}
+
+	// Initialize swiper with updated options
+	var swiper = new Swiper('.mySwiper', {
 		direction: 'horizontal',
-		slidesPerView: 4,
+		slidesPerView: slidesPerView,
 		spaceBetween: 30,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
 		},
-	};
-
-	// Check if the screen width is greater than 480px
-	if (window.innerWidth < 480) {
-		swiperOptions.mousewheel = true;
-		swiperOptions.slidesPerView = 2; // Adjust slides per view for larger screens
-	}
-
-	var swiper = new Swiper('.mySwiper', swiperOptions);
+	});
 }
 
 // Call the functions
