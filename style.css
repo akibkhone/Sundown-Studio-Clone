@@ -573,7 +573,7 @@ video {
 
 footer {
 	position: fixed;
-	height: 105vh;
+	height: 100vh;
 	width: 100%;
 	z-index: 9;
 	bottom: 0;
@@ -1044,6 +1044,11 @@ form button {
 		padding-left: 15px;
 	}
 
+	#footer-page {
+		width: 100vw;
+		height: 70vh;
+	}
+
 	footer {
 		height: 70vh;
 		width: 100vw;
@@ -1073,13 +1078,13 @@ form button {
 	}
 
 	#footer-bottom {
-		height: 15vh;
-		padding: 15px;
+		height: 3rem;
+		min-height: 15vh;
+		padding: 20px;
 		display: flex;
-		flex-direction: column-reverse;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
-		gap: 10px;
+		flex-direction: column-reverse;
 	}
 
 	#footer-bottom h5 {
@@ -1353,8 +1358,12 @@ form button {
 		padding-right: 1rem;
 		padding-left: 15px;
 	}
+
+	#footer-page {
+		height: 70vh;
+	}
 	footer {
-		height: 80vh;
+		height: 70vh;
 		width: 100vw;
 	}
 
@@ -1407,7 +1416,7 @@ form button {
 @media only screen and (min-width: 1024) and (max-width: 1439px) {
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1400px) {
 	#hero {
 		width: 100vw;
 		padding: 40px;
@@ -1564,7 +1573,7 @@ form button {
 	}
 
 	.project-right {
-		align-items: start;
+		align-items: center;
 	}
 	.project-right h5,
 	p {
