@@ -3,6 +3,8 @@ const scroll = new LocomotiveScroll({
 	smooth: true,
 });
 
+console.log(window.innerHeight + 'Height');
+console.log(window.innerWidth + 'Width');
 function handleProjects() {
 	const projectContainer = document.querySelector('#project-container');
 	const projects = projectContainer.querySelectorAll('.project');
@@ -91,6 +93,7 @@ function handleSwiper() {
 		direction: 'horizontal',
 		slidesPerView: slidesPerView,
 		spaceBetween: 30,
+		mousewheel: true,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,

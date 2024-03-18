@@ -507,7 +507,9 @@ video {
 	display: block;
 	position: relative;
 	background-color: black;
+	border-radius: 25px;
 }
+
 #services-right img {
 	border-radius: 25px;
 }
@@ -861,7 +863,11 @@ form button {
 
 	#about {
 		min-height: 50vh;
+		padding: 10vw 0;
 		width: 100%;
+	}
+
+	#moving-text {
 	}
 
 	#moving-text h1 {
@@ -874,7 +880,8 @@ form button {
 	}
 
 	#about-bottom {
-		padding: 0 20px;
+		height: 100%;
+		padding: 20px;
 		flex-direction: column;
 		align-items: start;
 		justify-content: center;
@@ -1000,13 +1007,13 @@ form button {
 	}
 
 	#services-right {
-		width: 100%;
-		height: 500px;
+		width: 100vw;
+		height: 400px;
 	}
 
 	#services-right img {
+		padding: 0;
 		object-fit: cover;
-		height: 100%;
 	}
 
 	#clients {
@@ -1038,8 +1045,9 @@ form button {
 	}
 
 	footer {
-		height: 90vh;
+		height: 70vh;
 		width: 100vw;
+		padding: 1rem 0rem;
 	}
 
 	#footer-top {
@@ -1281,7 +1289,6 @@ form button {
 		width: 100%;
 		min-height: 80vh;
 		padding: 30px;
-		background-color: blue;
 	}
 
 	.services-container {
@@ -1346,7 +1353,6 @@ form button {
 		padding-right: 1rem;
 		padding-left: 15px;
 	}
-
 	footer {
 		height: 80vh;
 		width: 100vw;
@@ -1401,7 +1407,7 @@ form button {
 @media only screen and (min-width: 1024) and (max-width: 1439px) {
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
 	#hero {
 		width: 100vw;
 		padding: 40px;
